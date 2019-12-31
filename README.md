@@ -1,5 +1,8 @@
 ### jenkins_docker_compose
-官网上只有docker run的两个相关命令，很是繁琐，将其整合为docker-compose，间docker-compose.yml
+官网上只有`docker run`的两个相关命令，很是繁琐，将其整合为`docker compose`，见`docker-compose.yml`文件
 ### 说明
 - 仅仅是将[jenkins官网](https://jenkins.io/doc/book/installing/)上的两个命令进行了整合，需提前按官方文档创建jenkins网络和相关volumes
-- 增加了restart=unless-stopped参数
+- 取消-rm相关命令，而是增加了restart=unless-stopped参数，使可以重启
+### 使用
+- 安装[docker-compose](https://docs.docker.com/compose/install/)
+- 在下载的`docker-compose.yml`目录下运行`docker-compose up -d`启动，运行`docker-compose down`来关闭
