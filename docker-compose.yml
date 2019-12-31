@@ -32,8 +32,6 @@ services:
       - jenkins-data:/var/jenkins_home
     networks:
       jenkins:
-        aliases:
-          - docker
 volumes:
   jenkins-docker-certs:
     external: true
