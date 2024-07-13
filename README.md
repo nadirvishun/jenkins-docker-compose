@@ -5,4 +5,4 @@
 - 取消原有的`-rm`相关命令，改为`restart=unless-stopped`参数，使可以重启
 ### 使用
 - 安装[docker-compose](https://docs.docker.com/compose/install/)
-- 在下载的`docker-compose.yml`目录下运行`docker-compose up -d`启动，运行`docker-compose down`来关闭
+- 在下载的`docker-compose.yml`目录下运行`docker compose up -d`启动，运行`docker compose down`来关闭
