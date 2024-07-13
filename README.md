@@ -2,6 +2,14 @@
 官网上只有`docker run`的两个相关命令，很是繁琐，将其整合为`docker compose`，见`docker-compose.yml`文件
 ### 说明
 - 仅仅是将[jenkins官网](https://jenkins.io/doc/book/installing/)上的两个命令进行了整合，需提前按官方文档创建相关`network`和相关`volumes`
+  
+  ```sh
+  #创建network
+  docker network create jenkins
+  #创建volumes
+  docker volume create --name=jenkins-docker-certs
+  docker volume create --name=jenkins-data
+  ```
 - 取消原有的`-rm`相关命令，改为`restart=unless-stopped`参数，使可以重启
 ### 使用
 - 安装[docker-compose](https://docs.docker.com/compose/install/)
